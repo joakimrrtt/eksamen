@@ -2,12 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
 <body>
     <div>
         <h1>Login</h1>
+        <form method="POST" action="{{ url_for('login') }}">
+            {{ form.hidden_tag() }}
+            <div>
+                <label for="username">Username</label>
+                {{ form.username(size=32) }} #ai generert
+            </div>
+            <div>
+                <label for="password">Password</label>
+                {{ form.password(size=32) }} #ai generert
+            </div>
+            <div>
+                {{ form.submit() }} #ai generert
+            </div>
+        </form>
+        <div>
+            <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign Up</a></p>
+        </div>
     </div>
 </body>
 </html>
