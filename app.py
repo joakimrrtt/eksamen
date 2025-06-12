@@ -48,7 +48,7 @@ class LoginForm(FlaskForm):
 # Routes
 @app.route('/')
 def home():
-    return render_template ("home.html")
+    return render_template ("index.html")
 
 """
 This route takes both get and post requests and uses LoginForm as an instance.
